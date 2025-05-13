@@ -1,0 +1,20 @@
+{
+	"name": "@samual/types",
+	"version": "0.0.0",
+	"type": "module",
+	"license": "MIT",
+	"private": true,
+	"engines": {
+		"node": "^20.10",
+		"pnpm": "^10"
+	},
+	"exports": {
+		".": "./index.js"
+	},
+	"devDependencies": {
+		"@types/node": "~20.10.8",
+		"@types/semver": "^7.7.0",
+		"semver": "^7.7.2",
+		"typescript": "^5.8.3"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"extends": "..",
+	"include": [ "**/*" ],
+	"compilerOptions": {
+		"declaration": true,
+		"outDir": "../dist",
+		"types": [ "node" ],
+		"isolatedDeclarations": true,
+		"checkJs": false,
+		"noEmit": false
+	}
+}
