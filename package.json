@@ -4,6 +4,7 @@
 	"type": "module",
 	"license": "MIT",
 	"private": true,
+	"repository": "github:samualtnorman/types",
 	"engines": {
 		"node": "^20.10",
 		"pnpm": "^10"
