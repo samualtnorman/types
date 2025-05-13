@@ -6,7 +6,7 @@
 	"private": true,
 	"repository": "github:samualtnorman/types",
 	"engines": {
-		"node": "^20.10",
+		"node": "^20.10 || >=22",
 		"pnpm": "^10"
 	},
 	"exports": {
