@@ -214,8 +214,12 @@ export type PickByValue<T, U> = { [K in keyof T as T[K] extends U ? K : never]: 
 /**
  * Somewhat similar to type intersection (`&`), but properties in the second type argument replace those in the first.
  *
+ * @example
+ * Basic Usage
+ * ```ts
  * type Foo = Replace<{ a: string, b: string }, { b: number }>
  * //   ^? type Foo = { a: string, b: number }
+ * ```
  */
 export type Replace<A, B> = Omit<A, keyof B> & B
 
