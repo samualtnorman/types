@@ -8,7 +8,7 @@ makeDirectorySync("dist", { recursive: true })
 
 writeFileSync(
 	"dist/jsr.json",
-	JSON.stringify({ name, version, license, exports: { ".": "./index.ts" } }, undefined, "\t")
+	JSON.stringify({ name, version, license, exports: "./index.ts" }, undefined, "\t")
 )
 
 process.exit()
