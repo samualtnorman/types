@@ -80,7 +80,7 @@ export type Async<T extends AnyFunction> = (...args: Parameters<T>) => Promise<R
 export type JsonValue = null | boolean | number | string | JsonValue[] | { [k: string]: JsonValue }
 
 /**
- * Types that can be [`sturcturedClone()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)'d
+ * Types that can be [`structuredClone()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)'d
  * and [sent to workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects).
  *
  * @example
