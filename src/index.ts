@@ -62,7 +62,7 @@ export type Rejecter = (reason?: unknown) => void
  * }
  * ```
  */
-export type Async<T extends AnyFunction> = (...args: Parameters<T>) => Promise<ReturnType<T>>
+export type Async<T extends AnyFunction> = (...args: Parameters<T>) => Promise<Awaited<ReturnType<T>>>
 
 /**
  * The types representable (survives a round trip) in JSON.
