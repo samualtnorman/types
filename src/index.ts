@@ -99,7 +99,7 @@ export type JsonObject = { [k: string]: JsonValue }
  * ```ts
  * import type { JsonValue } from "@samual/types"
  *
- * let fooJson = JSON.stringify({ … } satisifes JsonValue)
+ * let fooJson = JSON.stringify(… satisifes JsonValue)
  *
  * let fooParsed = JSON.parse(fooJson) as JsonValue
  * ```
