@@ -65,6 +65,33 @@ export type Rejecter = (reason?: unknown) => void
 export type Async<T extends AnyFunction> = (...args: Parameters<T>) => Promise<Awaited<ReturnType<T>>>
 
 /**
+ * [Primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) types representable (survives a round trip)
+ * in JSON.
+ *
+ * @example
+ * Basic Usage
+ * ```ts
+ * import type { JsonPrimitive } from "@samual/types"
+ *
+ * let fooJson = JSON.stringify(… satisfies JsonPrimitive)
+ * ```
+ */
+export type JsonPrimitive = null | boolean | number | string
+
+/**
+ * Object type representable (survives a round trip) in JSON.
+ *
+ * @example
+ * Basic Usage
+ * ```ts
+ * import type { JsonObject } from "@samual/types"
+ *
+ * let fooJson = JSON.stringify({ … } satisfies JsonObject)
+ * ```
+ */
+export type JsonObject = { [k: string]: JsonValue }
+
+/**
  * The types representable (survives a round trip) in JSON.
  *
  * @example
@@ -77,7 +104,7 @@ export type Async<T extends AnyFunction> = (...args: Parameters<T>) => Promise<A
  * let fooParsed = JSON.parse(fooJson) as JsonValue
  * ```
  */
-export type JsonValue = null | boolean | number | string | JsonValue[] | { [k: string]: JsonValue }
+export type JsonValue = JsonPrimitive | JsonValue[] | JsonObject
 
 /**
  * Types that can be [`structuredClone()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone)'d
